@@ -10,6 +10,7 @@
 		EBEB68461DD4A787009FA1A7 /* PRSwiftUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EBEB68451DD4A787009FA1A7 /* PRSwiftUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBEB684D1DD4A787009FA1A7 /* PRSwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEB68421DD4A787009FA1A7 /* PRSwiftUtils.framework */; };
 		EBEB68521DD4A787009FA1A7 /* PRSwiftUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEB68511DD4A787009FA1A7 /* PRSwiftUtilsTests.swift */; };
+		EBEB685D1DD4A794009FA1A7 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEB685C1DD4A794009FA1A7 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		EBEB684C1DD4A787009FA1A7 /* PRSwiftUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PRSwiftUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEB68511DD4A787009FA1A7 /* PRSwiftUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRSwiftUtilsTests.swift; sourceTree = "<group>"; };
 		EBEB68531DD4A787009FA1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBEB685C1DD4A794009FA1A7 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		EBEB68441DD4A787009FA1A7 /* PRSwiftUtils */ = {
 			isa = PBXGroup;
 			children = (
+				EBEB685C1DD4A794009FA1A7 /* Alert.swift */,
 				EBEB68451DD4A787009FA1A7 /* PRSwiftUtils.h */,
 				EBEB68471DD4A787009FA1A7 /* Info.plist */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBEB685D1DD4A794009FA1A7 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +314,7 @@
 		EBEB68571DD4A787009FA1A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +325,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rothen.PRSwiftUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		EBEB68581DD4A787009FA1A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
