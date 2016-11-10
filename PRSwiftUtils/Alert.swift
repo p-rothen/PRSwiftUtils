@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class Alert {
-    static func showAlertController(context:UIViewController, title: String, message: String, retryHandler: ((UIAlertAction) -> Void)?, acceptHandler: ((UIAlertAction) -> Void)?) {
+public class Alert {
+    public static func showAlertController(context:UIViewController, title: String, message: String, retryHandler: ((UIAlertAction) -> Void)?, acceptHandler: ((UIAlertAction) -> Void)?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Accept", style: .Default, handler: acceptHandler))
         
@@ -21,19 +21,19 @@ class Alert {
         context.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    static func showErrorAlertController(context:UIViewController, message: String) {
+    public static func showErrorAlertController(context:UIViewController, message: String) {
         showAlertController(context, title: "Error", message: message, retryHandler: nil, acceptHandler: nil)
     }
     
-    static func showInfoAlertController(context:UIViewController,  title: String, message: String) {
+    public static func showInfoAlertController(context:UIViewController,  title: String, message: String) {
         showAlertController(context, title: title, message: message, retryHandler: nil, acceptHandler: nil)
     }
     
-    static func showInfoAlertControllerWithDismissCompletionHandler(context:UIViewController,  title: String, message: String, acceptHandler: ((UIAlertAction) -> Void)?) {
+    public static func showInfoAlertControllerWithDismissCompletionHandler(context:UIViewController,  title: String, message: String, acceptHandler: ((UIAlertAction) -> Void)?) {
         showAlertController(context, title: title, message: message, retryHandler: nil, acceptHandler: acceptHandler)
     }
     
-    static func presentError(context:UIViewController, message: String?, retryHandler: ((UIAlertAction) -> Void)?, acceptHandler: ((UIAlertAction) -> Void)?) {
+    public static func presentError(context:UIViewController, message: String?, retryHandler: ((UIAlertAction) -> Void)?, acceptHandler: ((UIAlertAction) -> Void)?) {
         let displayMessage:String
         if (message != nil) {
             displayMessage = message!
@@ -44,7 +44,7 @@ class Alert {
         showAlertController(context, title: "Error", message: displayMessage, retryHandler: retryHandler, acceptHandler: acceptHandler)
     }
     
-    static func presentUnknownError(context:UIViewController) {
+    public static func presentUnknownError(context:UIViewController) {
         Alert.presentError(context, message: nil, retryHandler: nil, acceptHandler: nil)
     }
 }

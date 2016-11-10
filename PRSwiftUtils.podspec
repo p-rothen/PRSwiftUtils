@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
  
   # 2
-  s.version = "1.0"
+  s.version = "1.0.1"
  
   # 3
   s.license = { :type => "MIT", :file => "LICENSE" }
@@ -24,7 +24,9 @@ Pod::Spec.new do |s|
  
   # 7
   s.framework = "UIKit"
-  #s.dependency 'Alamofire', '~> 3.2.1'
+  s.dependency 'MBProgressHUD', '~> 1.0.0'
+  s.dependency 'SwiftyJSON', '2.3.2'
+  s.dependency 'Alamofire', '~> 3.2.1'
  
   # 8
   s.source_files = "PRSwiftUtils/**/*.{swift}"
